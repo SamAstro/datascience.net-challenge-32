@@ -1,15 +1,24 @@
 
 # coding: utf-8
 
-# # 
+# # Energies
+# **TODO add description**
 
 # In[1]:
+
+# !pip install version_information
+get_ipython().magic('load_ext version_information')
+get_ipython().magic('reload_ext version_information')
+get_ipython().magic('version_information numpy, scipy, matplotlib, pandas')
+
+
+# In[2]:
 
 get_ipython().magic('matplotlib inline')
 get_ipython().magic("config InlineBackend.figure_format='retina'")
 
 
-# In[2]:
+# In[3]:
 
 from IPython.display import IFrame, HTML, YouTubeVideo
 import matplotlib as mpl
@@ -19,7 +28,7 @@ import seaborn as sns
 import numpy as np
 
 
-# In[3]:
+# In[4]:
 
 import pandas as pd
 import os, sys
@@ -33,7 +42,7 @@ sns.set_context("poster", font_scale=1.3)
 warnings.filterwarnings('ignore')
 
 
-# In[11]:
+# In[5]:
 
 pd.set_option('display.max_rows', 99)
 pd.set_option('display.max_columns', 999)
@@ -47,63 +56,48 @@ pd.set_option('display.max_columns', 999)
 #qgrid.nbinstall(overwrite=True)
 
 
-# In[32]:
+# ## Energie annuelle
+
+# In[6]:
 
 df = pd.read_csv('../data/eCO2mix_RTE_energie_A.xls', sep='\t', encoding = "ISO-8859-1")
 
 
-# In[33]:
+# In[7]:
 
 df.drop('Unnamed: 40', axis=1, inplace=True)
 
 
-# In[34]:
+# In[8]:
 
 df[df.Territoire == 'France'].head()
 
 
-# In[64]:
+# In[9]:
 
 df.info()
 
 
-# ___
+# ## Energie Mensuelle
 
-# In[41]:
+# In[10]:
 
 dfM = pd.read_csv('../data/eCO2mix_RTE_energie_M.xls', sep='\t', encoding = "ISO-8859-1")
 
 
-# In[42]:
+# In[11]:
 
 dfM.drop('Unnamed: 22', axis=1, inplace=True)
 
 
-# In[43]:
+# In[12]:
 
 dfM[dfM.Territoire == 'France'].head()
 
 
-# In[63]:
+# In[13]:
 
 dfM.info()
-
-
-# ___
-
-# In[49]:
-
-df_Fr2012 = pd.read_csv('../data/france/eCO2mix_RTE_Annuel-Definitif_2012.xls', sep='\t', encoding = "ISO-8859-1")
-
-
-# In[50]:
-
-df_Fr2012.head()
-
-
-# In[56]:
-
-df_Fr2012.info()
 
 
 # In[ ]:

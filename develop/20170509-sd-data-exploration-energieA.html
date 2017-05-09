@@ -11778,13 +11778,47 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-"> <a class="anchor-link" href="#-">&#182;</a></h1>
+<h1 id="Energies">Energies<a class="anchor-link" href="#Energies">&#182;</a></h1><p><strong>TODO add description</strong></p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># !pip install version_information</span>
+<span class="o">%</span><span class="k">load_ext</span> version_information
+<span class="o">%</span><span class="k">reload_ext</span> version_information
+<span class="o">%</span><span class="k">version_information</span> numpy, scipy, matplotlib, pandas
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[1]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<table><tr><th>Software</th><th>Version</th></tr><tr><td>Python</td><td>3.5.2 64bit [GCC 4.2.1 Compatible Apple LLVM 4.2 (clang-425.0.28)]</td></tr><tr><td>IPython</td><td>5.1.0</td></tr><tr><td>OS</td><td>Darwin 16.1.0 x86_64 i386 64bit</td></tr><tr><td>numpy</td><td>1.12.1</td></tr><tr><td>scipy</td><td>0.19.0</td></tr><tr><td>matplotlib</td><td>2.0.0</td></tr><tr><td>pandas</td><td>0.19.2</td></tr><tr><td colspan='2'>Wed May 10 00:22:58 2017 CEST</td></tr></table>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
@@ -11798,7 +11832,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">IFrame</span><span class="p">,</span> <span class="n">HTML</span><span class="p">,</span> <span class="n">YouTubeVideo</span>
@@ -11816,7 +11850,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -11838,7 +11872,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_rows&#39;</span><span class="p">,</span> <span class="mi">99</span><span class="p">)</span>
@@ -11866,9 +11900,18 @@ div#notebook {
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Energie-annuelle">Energie annuelle<a class="anchor-link" href="#Energie-annuelle">&#182;</a></h2>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../data/eCO2mix_RTE_energie_A.xls&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s2">&quot;ISO-8859-1&quot;</span><span class="p">)</span>
@@ -11881,7 +11924,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Unnamed: 40&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -11894,7 +11937,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Territoire</span> <span class="o">==</span> <span class="s1">&#39;France&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -11909,7 +11952,7 @@ div#notebook {
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[34]:</div>
+<div class="prompt output_prompt">Out[8]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -12146,7 +12189,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -12222,14 +12265,13 @@ memory usage: 12.6+ KB
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-
+<h2 id="Energie-Mensuelle">Energie Mensuelle<a class="anchor-link" href="#Energie-Mensuelle">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dfM</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../data/eCO2mix_RTE_energie_M.xls&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s2">&quot;ISO-8859-1&quot;</span><span class="p">)</span>
@@ -12242,7 +12284,7 @@ memory usage: 12.6+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dfM</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Unnamed: 22&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -12255,7 +12297,7 @@ memory usage: 12.6+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dfM</span><span class="p">[</span><span class="n">dfM</span><span class="o">.</span><span class="n">Territoire</span> <span class="o">==</span> <span class="s1">&#39;France&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -12270,7 +12312,7 @@ memory usage: 12.6+ KB
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[43]:</div>
+<div class="prompt output_prompt">Out[12]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -12442,7 +12484,7 @@ memory usage: 12.6+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dfM</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -12487,369 +12529,6 @@ Echanges aves la Suisse                     87 non-null float64
 Echanges avec l&#39;Allemagne et la Belgique    87 non-null float64
 dtypes: float64(10), int64(9), object(3)
 memory usage: 120.2+ KB
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_Fr2012</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../data/france/eCO2mix_RTE_Annuel-Definitif_2012.xls&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s2">&quot;ISO-8859-1&quot;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_Fr2012</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[50]:</div>
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Périmètre</th>
-      <th>Nature</th>
-      <th>Date</th>
-      <th>Heures</th>
-      <th>Consommation</th>
-      <th>Prévision J-1</th>
-      <th>Prévision J</th>
-      <th>Fioul</th>
-      <th>Charbon</th>
-      <th>Gaz</th>
-      <th>Nucléaire</th>
-      <th>Eolien</th>
-      <th>Solaire</th>
-      <th>Hydraulique</th>
-      <th>Pompage</th>
-      <th>Bioénergies</th>
-      <th>Ech. physiques</th>
-      <th>Taux de Co2</th>
-      <th>Ech. comm. Angleterre</th>
-      <th>Ech. comm. Espagne</th>
-      <th>Ech. comm. Italie</th>
-      <th>Ech. comm. Suisse</th>
-      <th>Ech. comm. Allemagne-Belgique</th>
-      <th>Fioul - TAC</th>
-      <th>Fioul - Cogén.</th>
-      <th>Fioul - Autres</th>
-      <th>Gaz - TAC</th>
-      <th>Gaz - Cogén.</th>
-      <th>Gaz - CCG</th>
-      <th>Gaz - Autres</th>
-      <th>Hydraulique - Fil de l?eau + éclusée</th>
-      <th>Hydraulique - Lacs</th>
-      <th>Hydraulique - STEP turbinage</th>
-      <th>Bioénergies - Déchets</th>
-      <th>Bioénergies - Biomasse</th>
-      <th>Bioénergies - Biogaz</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>France</th>
-      <td>Données définitives</td>
-      <td>2012-01-01</td>
-      <td>00:00</td>
-      <td>58315.0</td>
-      <td>58200.0</td>
-      <td>58200.0</td>
-      <td>492.0</td>
-      <td>25.0</td>
-      <td>3816.0</td>
-      <td>52697.0</td>
-      <td>3588.0</td>
-      <td>0.0</td>
-      <td>7922.0</td>
-      <td>-1139.0</td>
-      <td>719.0</td>
-      <td>-9806.0</td>
-      <td>33.0</td>
-      <td>-1750</td>
-      <td>-1200</td>
-      <td>-862</td>
-      <td>-2625</td>
-      <td>-2940</td>
-      <td>ND</td>
-      <td>ND</td>
-      <td>ND</td>
-      <td>ND</td>
-      <td>ND</td>
-      <td>ND</td>
-      <td>ND</td>
-      <td>ND</td>
-      <td>ND</td>
-      <td>ND</td>
-      <td>ND</td>
-      <td>ND</td>
-      <td>ND</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>France</th>
-      <td>Données définitives</td>
-      <td>2012-01-01</td>
-      <td>00:15</td>
-      <td>NaN</td>
-      <td>57700.0</td>
-      <td>57550.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>France</th>
-      <td>Données définitives</td>
-      <td>2012-01-01</td>
-      <td>00:30</td>
-      <td>58315.0</td>
-      <td>57200.0</td>
-      <td>56900.0</td>
-      <td>492.0</td>
-      <td>25.0</td>
-      <td>3816.0</td>
-      <td>52697.0</td>
-      <td>3588.0</td>
-      <td>0.0</td>
-      <td>7922.0</td>
-      <td>-1139.0</td>
-      <td>719.0</td>
-      <td>-9806.0</td>
-      <td>33.0</td>
-      <td>-1750</td>
-      <td>-1200</td>
-      <td>-862</td>
-      <td>-2625</td>
-      <td>-2940</td>
-      <td>ND</td>
-      <td>ND</td>
-      <td>ND</td>
-      <td>ND</td>
-      <td>ND</td>
-      <td>ND</td>
-      <td>ND</td>
-      <td>ND</td>
-      <td>ND</td>
-      <td>ND</td>
-      <td>ND</td>
-      <td>ND</td>
-      <td>ND</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>France</th>
-      <td>Données définitives</td>
-      <td>2012-01-01</td>
-      <td>00:45</td>
-      <td>NaN</td>
-      <td>56200.0</td>
-      <td>56000.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>France</th>
-      <td>Données définitives</td>
-      <td>2012-01-01</td>
-      <td>01:00</td>
-      <td>56231.0</td>
-      <td>55200.0</td>
-      <td>55100.0</td>
-      <td>492.0</td>
-      <td>25.0</td>
-      <td>3834.0</td>
-      <td>51747.0</td>
-      <td>3536.0</td>
-      <td>0.0</td>
-      <td>7598.0</td>
-      <td>-1730.0</td>
-      <td>721.0</td>
-      <td>-9993.0</td>
-      <td>34.0</td>
-      <td>-1750</td>
-      <td>-1400</td>
-      <td>-862</td>
-      <td>-2625</td>
-      <td>-2714</td>
-      <td>ND</td>
-      <td>ND</td>
-      <td>ND</td>
-      <td>ND</td>
-      <td>ND</td>
-      <td>ND</td>
-      <td>ND</td>
-      <td>ND</td>
-      <td>ND</td>
-      <td>ND</td>
-      <td>ND</td>
-      <td>ND</td>
-      <td>ND</td>
-      <td>NaN</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_Fr2012</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-Index: 35137 entries, France to RTE ne pourra être tenu responsable de l&#39;usage qui pourrait être fait des données mises à disposition, ni en cas de prévisions qui se révèleraient imprécises.
-Data columns (total 36 columns):
-Périmètre                               35136 non-null object
-Nature                                  35136 non-null object
-Date                                    35136 non-null object
-Heures                                  17568 non-null float64
-Consommation                            35136 non-null float64
-Prévision J-1                           35136 non-null float64
-Prévision J                             17568 non-null float64
-Fioul                                   17568 non-null float64
-Charbon                                 17568 non-null float64
-Gaz                                     17568 non-null float64
-Nucléaire                               17568 non-null float64
-Eolien                                  17568 non-null float64
-Solaire                                 17568 non-null float64
-Hydraulique                             17568 non-null float64
-Pompage                                 17568 non-null float64
-Bioénergies                             17568 non-null float64
-Ech. physiques                          17568 non-null float64
-Taux de Co2                             17255 non-null object
-Ech. comm. Angleterre                   17567 non-null object
-Ech. comm. Espagne                      17562 non-null object
-Ech. comm. Italie                       17567 non-null object
-Ech. comm. Suisse                       17567 non-null object
-Ech. comm. Allemagne-Belgique           17568 non-null object
-Fioul - TAC                             17568 non-null object
-Fioul - Cogén.                          17568 non-null object
-Fioul - Autres                          17568 non-null object
-Gaz - TAC                               17568 non-null object
-Gaz - Cogén.                            17568 non-null object
-Gaz - CCG                               17568 non-null object
-Gaz - Autres                            17568 non-null object
-Hydraulique - Fil de l?eau + éclusée    17568 non-null object
-Hydraulique - Lacs                      17568 non-null object
-Hydraulique - STEP turbinage            17568 non-null object
-Bioénergies - Déchets                   17568 non-null object
-Bioénergies - Biomasse                  17568 non-null object
-Bioénergies - Biogaz                    0 non-null float64
-dtypes: float64(15), object(21)
-memory usage: 9.9+ MB
 </pre>
 </div>
 </div>
