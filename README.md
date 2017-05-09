@@ -43,9 +43,3 @@ This notebook is intended as a tutorial.
 Files shared under the MIT License.
 
 ## IMPORTANT NOTE
-
-There are two notebooks, one analyzing the data base provided by
-DataScience.net, the other analyzing a updated data base (please see notebook
-for link to that data base).
-
-This latter data base may be 
